@@ -1,5 +1,7 @@
 # Rubik's Cube Solver — IDA* with a Pattern Database Heuristic
 
+[![tests](https://github.com/Vipluv01/rubiks-cube-solver/actions/workflows/tests.yml/badge.svg)](https://github.com/Vipluv01/rubiks-cube-solver/actions/workflows/tests.yml)
+
 An **optimal** Rubik's cube solver: given a scramble, it doesn't just find
 *a* solution, it finds the *shortest* one, using Korf's 1997 approach —
 Iterative Deepening A* (IDA*) guided by a pattern database (PDB) heuristic.
