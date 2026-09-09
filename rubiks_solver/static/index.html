@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rubik's Cube Solver — IDA* + Pattern Database</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Rubik's Cube Solver</h1>
+    <p class="subtitle">Optimal IDA* search guided by a corner pattern-database heuristic (Korf, 1997)</p>
+  </header>
+
+  <main>
+    <section class="panel cube-panel">
+      <div id="net" class="net">
+        <div class="cell blank"></div><div class="face" data-face="U"></div><div class="cell blank"></div><div class="cell blank"></div>
+        <div class="face" data-face="L"></div><div class="face" data-face="F"></div><div class="face" data-face="R"></div><div class="face" data-face="B"></div>
+        <div class="cell blank"></div><div class="face" data-face="D"></div><div class="cell blank"></div><div class="cell blank"></div>
+      </div>
+
+      <div class="controls">
+        <label>Scramble length
+          <input id="scrambleLen" type="number" min="0" max="30" value="8" />
+        </label>
+        <button id="btnScramble">New scramble</button>
+        <label>Heuristic
+          <select id="heuristic">
+            <option value="pdb" selected>Pattern database</option>
+            <option value="weak">Misplaced corners (weak)</option>
+          </select>
+        </label>
+        <button id="btnSolve">Solve</button>
+      </div>
+
+      <div class="playback">
+        <button id="btnPrev" disabled>&#8592; step</button>
+        <button id="btnPlay" disabled>&#9654; play</button>
+        <button id="btnNext" disabled>step &#8594;</button>
+        <button id="btnReset" disabled>reset</button>
+        <span id="moveIndicator" class="move-indicator"></span>
+      </div>
+
+      <div id="moveList" class="move-list"></div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="panel stats-panel">
+      <h2>Search stats</h2>
+      <dl id="stats" class="stats">
+        <dt>Nodes expanded</dt><dd id="statNodes">—</dd>
+        <dt>Solve time</dt><dd id="statTime">—</dd>
+        <dt>Solution length</dt><dd id="statLen">—</dd>
+        <dt>Heuristic used</dt><dd id="statHeuristic">—</dd>
+      </dl>
+
+      <h2>Why the pattern database matters</h2>
+      <p class="blurb">
+        Measured on this exact solver, not a textbook figure: solving the
+        same scrambles with a plain admissible heuristic
+        (<code>ceil(misplaced_corners / 4)</code>) versus the exact
+        corner-subproblem distance from the pattern database.
+      </p>
+      <div id="chart" class="chart"></div>
+      <p class="blurb small" id="chartCaption"></p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://github.com/Vipluv01/rubiks-cube-solver" target="_blank" rel="noopener">source on GitHub</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

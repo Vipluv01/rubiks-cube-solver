@@ -98,10 +98,31 @@ rubiks_solver/
               8/12-element arrays dominates at IDA*'s node-per-node scale
   scramble.py random scramble generation
   cli.py      command-line entry point
+  facelets.py sticker-level model for the web UI, coded independently from
+              cube.py's cubie model (not derived from it) as a genuine
+              cross-check -- see tests/test_facelets.py
+  webapp.py   FastAPI backend for the browser demo: runs the real solver
+              server-side and serves static/
+  static/     the browser frontend (vanilla HTML/CSS/JS, no framework)
 scripts/
   build_pdb.py   builds and saves the pattern database (~3 min, run once)
   benchmark.py   the weak-vs-PDB ablation in Results below
 tests/           pytest suite (cube geometry, coordinate round-trips, solver)
+```
+
+## Web demo
+
+![screenshot](docs/screenshot.png)
+
+Scramble, solve, and step through the solution move-by-move on a live
+cube net, with the search stats and the weak-vs-PDB chart from
+[Results](#results) rendered from the same `results/benchmark.json`. The
+backend runs the actual IDA* solver against the actual PDB file — nothing
+in this UI is precomputed or faked.
+
+```bash
+.venv/bin/python -m uvicorn rubiks_solver.webapp:app --reload
+# then open http://127.0.0.1:8000
 ```
 
 ## Running it
