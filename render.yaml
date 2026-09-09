@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: rubiks-cube-solver
+    env: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8000

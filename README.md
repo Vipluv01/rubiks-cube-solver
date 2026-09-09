@@ -125,6 +125,14 @@ in this UI is precomputed or faked.
 # then open http://127.0.0.1:8000
 ```
 
+**Deploying it:** `Dockerfile` + `render.yaml` are set up for a one-click
+[Render](https://render.com) Blueprint deploy — the pattern database is
+committed to the repo (88MB, under GitHub's 100MB limit) rather than
+rebuilt on the free-tier build machine, since that BFS peaks at well over
+the free tier's memory budget. On Render → New → Blueprint → point at this
+repo → deploy. Free-tier services spin down after 15 minutes idle, so the
+first request after a quiet period takes ~30-60s to wake up.
+
 ## Running it
 
 ```bash
