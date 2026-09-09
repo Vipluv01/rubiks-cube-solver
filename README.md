@@ -2,6 +2,9 @@
 
 [![tests](https://github.com/Vipluv01/rubiks-cube-solver/actions/workflows/tests.yml/badge.svg)](https://github.com/Vipluv01/rubiks-cube-solver/actions/workflows/tests.yml)
 
+**Live demo: [rubiks-cube-solver-0zoe.onrender.com](https://rubiks-cube-solver-0zoe.onrender.com/)**
+(free tier — the first request after ~15 min idle takes ~30-60s to wake up)
+
 An **optimal** Rubik's cube solver: given a scramble, it doesn't just find
 *a* solution, it finds the *shortest* one, using Korf's 1997 approach —
 Iterative Deepening A* (IDA*) guided by a pattern database (PDB) heuristic.
