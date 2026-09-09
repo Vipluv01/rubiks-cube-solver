@@ -1,0 +1,118 @@
+{
+  "weak": {
+    "3": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 153,
+      "avg_time_s": 0.001,
+      "avg_solution_len": 3.0
+    },
+    "4": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 3165,
+      "avg_time_s": 0.008,
+      "avg_solution_len": 4.0
+    },
+    "5": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 53648,
+      "avg_time_s": 0.148,
+      "avg_solution_len": 5.0
+    },
+    "6": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 453542,
+      "avg_time_s": 1.549,
+      "avg_solution_len": 6.0
+    },
+    "7": {
+      "attempted": 3,
+      "solved": 2,
+      "avg_nodes": 2722446,
+      "avg_time_s": 12.163,
+      "avg_solution_len": 6.5
+    }
+  },
+  "pdb": {
+    "3": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 15,
+      "avg_time_s": 0.0,
+      "avg_solution_len": 3.0
+    },
+    "4": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 108,
+      "avg_time_s": 0.001,
+      "avg_solution_len": 4.0
+    },
+    "5": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 335,
+      "avg_time_s": 0.002,
+      "avg_solution_len": 5.0
+    },
+    "6": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 2475,
+      "avg_time_s": 0.014,
+      "avg_solution_len": 6.0
+    },
+    "7": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 4371,
+      "avg_time_s": 0.047,
+      "avg_solution_len": 6.67
+    },
+    "8": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 19084,
+      "avg_time_s": 0.165,
+      "avg_solution_len": 7.0
+    },
+    "9": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 568361,
+      "avg_time_s": 3.727,
+      "avg_solution_len": 8.0
+    },
+    "10": {
+      "attempted": 3,
+      "solved": 3,
+      "avg_nodes": 1881244,
+      "avg_time_s": 11.851,
+      "avg_solution_len": 9.0
+    }
+  },
+  "_meta": {
+    "depths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "weak_max_depth": 7,
+    "weak_max_nodes": 6000000,
+    "pdb_max_nodes": 30000000,
+    "total_wall_time_s": 89.0
+  }
+}
